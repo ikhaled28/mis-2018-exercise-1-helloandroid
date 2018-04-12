@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.URLUtil;
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
         planeView.setVisibility(View.VISIBLE);
         myImageView.setVisibility(View.INVISIBLE);
+
+        planeView.setMovementMethod(new ScrollingMovementMethod());
 
         if(!isImageAvailable){
             toggleButton.setEnabled(false);
